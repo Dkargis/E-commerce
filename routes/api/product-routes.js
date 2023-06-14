@@ -8,8 +8,9 @@ router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   const productData = await Product.findAll({
-    include: [{ model: Category, through: ProductTag, as: 'tagged_products' }]
+    include: [{ model: Category}]
   })
+  res.json(productData)
 });
 
 // get one product
@@ -17,8 +18,9 @@ router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   const productData = await Product.findByPk(req.params.id, {
-    include: [{ model: Category, through: ProductTag, as: 'tagged_products' }]
+    include: [{ model: Category}]
   })
+  res.json(productData)
 });
 
 // create new product
@@ -102,6 +104,7 @@ router.delete('/:id', async (req, res) => {
       id: req.params.id
     }
   })
+  res.json(productData)
 });
 
 module.exports = router;

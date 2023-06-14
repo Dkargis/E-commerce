@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   const categoryData = await Category.findAll({
-    include: [{ model: Product, through: ProductTag, as: 'tagged_products' }]
+    include: [{ model: Product }]
   })
   res.json(categoryData)
 });
@@ -16,8 +16,9 @@ router.get('/:id',async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   const categoryData = await Category.findByPk(req.params.id, {
-    include: [{ model: Product, through: ProductTag, as: 'tagged_products' }]
+    include: [{ model: Product}]
   })
+  res.json(categoryData)
 });
 
 router.post('/', async (req, res) => {
@@ -25,6 +26,7 @@ router.post('/', async (req, res) => {
   const categoryData = await Category.create({
     category_name: req.body.category_name
   })
+  res.json(categoryData)
 });
 
 router.put('/:id', async (req, res) => {
@@ -34,6 +36,7 @@ router.put('/:id', async (req, res) => {
       id: req.params.id
     }
   })
+  res.json(categoryData)
 });
 
 router.delete('/:id', async (req, res) => {
@@ -43,6 +46,7 @@ router.delete('/:id', async (req, res) => {
       id: req.params.id
     }
   })
+  res.json(categoryData)
 });
 
 module.exports = router;
