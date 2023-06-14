@@ -19,10 +19,11 @@ npm install
 To use this application, run the following command:
 ```
 npm start
+node server.js
 ```
 
 ## Walkthrough
-[![Walkthrough Video](https://img.youtube.com/vi/3Q4Z1Z0ZQ5c/0.jpg)](https://www.youtube.com/watch?v=3Q4Z1Z0ZQ5c)
+[![Walkthrough Video](https://drive.google.com/file/d/1roQM9AoKzbCh7teZ58z7Yg_5sbFjWAOo/view?usp=sharing)
 
 ## Questions
 If you have any questions about this repo, open an issue or contact me directly at [dane.kargis@gmail.com]
