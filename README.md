@@ -23,7 +23,8 @@ node server.js
 ```
 
 ## Walkthrough
-[![Walkthrough Video](https://drive.google.com/file/d/1roQM9AoKzbCh7teZ58z7Yg_5sbFjWAOo/view?usp=sharing)
+[![Walkthrough Video]
+https://drive.google.com/file/d/1roQM9AoKzbCh7teZ58z7Yg_5sbFjWAOo/view?usp=sharing
 
 ## Questions
 If you have any questions about this repo, open an issue or contact me directly at [dane.kargis@gmail.com]
